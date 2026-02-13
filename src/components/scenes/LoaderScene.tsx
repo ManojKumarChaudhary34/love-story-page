@@ -1,6 +1,6 @@
 import FloatingHearts from "../FloatingHearts";
 
-const LoaderScene = () => {
+const LoaderScene = ({ onStart }: { onStart: () => void }) => {
   return (
     <div className="flex h-screen w-screen items-center justify-center gradient-romantic">
       <FloatingHearts count={10} />
@@ -10,7 +10,13 @@ const LoaderScene = () => {
         </span>
         <p className="font-romantic text-3xl md:text-5xl text-primary-foreground text-glow">
           Loading Our Love…
-        </p>
+        </p>{" "}
+        <button
+          onClick={onStart}
+          className="gradient-romantic text-primary-foreground font-semibold text-lg md:text-xl px-10 py-4 rounded-2xl shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95"
+        >
+           Tap to start ❤️
+        </button>
       </div>
     </div>
   );

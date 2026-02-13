@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import LoaderScene from "@/components/scenes/LoaderScene";
 import SlideshowScene from "@/components/scenes/SlideshowScene";
 import WishingCardScene from "@/components/scenes/WishingCardScene";
@@ -10,6 +10,7 @@ type Scene = "loader" | "slideshow" | "wishing" | "proposal" | "celebration";
 const Index = () => {
   const [scene, setScene] = useState<Scene>("loader");
   const [fadeOut, setFadeOut] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const transition = useCallback((next: Scene) => {
     setFadeOut(true);
@@ -19,12 +20,22 @@ const Index = () => {
     }, 600);
   }, []);
 
-  useEffect(() => {
-    if (scene === "loader") {
-      const timer = setTimeout(() => transition("slideshow"), 2500);
-      return () => clearTimeout(timer);
-    }
-  }, [scene, transition]);
+  // useEffect(() => {
+  //   if (scene === "loader") {
+  //     const timer = setTimeout(() => transition("slideshow"), 2500);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [scene, transition]);
+  // useEffect(() => {
+  //    if (scene === "celebration") {
+  //     audioRef.current?.pause();
+  //   }
+  // }, [scene]);
+
+  const handleStart = () => {
+    audioRef.current?.play();
+    transition('slideshow')
+  };
 
   const handleSlideshowComplete = useCallback(() => {
     transition("wishing");
@@ -46,7 +57,7 @@ const Index = () => {
         transition: "opacity 0.6s ease-in-out",
       }}
     >
-      {scene === "loader" && <LoaderScene />}
+      {scene === "loader" && <LoaderScene onStart={handleStart} />}
       {scene === "slideshow" && (
         <SlideshowScene onComplete={handleSlideshowComplete} />
       )}
@@ -55,6 +66,9 @@ const Index = () => {
       )}
       {scene === "proposal" && <ProposalScene onYes={handleYes} />}
       {scene === "celebration" && <CelebrationScene />}
+      <audio ref={audioRef} loop>
+        <source src="/music1.mp3" type="audio/mpeg" />
+      </audio>
     </div>
   );
 };
