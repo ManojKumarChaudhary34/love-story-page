@@ -1,38 +1,21 @@
 import { useState, useEffect } from "react";
 import FloatingHearts from "../FloatingHearts";
-
-import memory1 from "@/assets/1.jpg";
-import memory2 from "@/assets/2.jpg";
-import memory3 from "@/assets/3.jpg";
-import memory4 from "@/assets/4.jpg";
-import memory5 from "@/assets/5.jpg";
-import memory6 from "@/assets/6.jpg";
-import memory7 from "@/assets/7.jpg";
-import memory8 from "@/assets/8.jpg";
-import memory9 from "@/assets/9.jpg";
-import memory10 from "@/assets/10.jpg";
-import memory11 from "@/assets/third_last.jpg";
-import memory12 from "@/assets/second_last.jpeg";
-import memory13 from "@/assets/last.jpeg";
-import memory14 from "@/assets/8-1.jpg";
-import memory15 from "@/assets/10-1.jpg";
-
 const images = [
-  memory1,
-  memory2,
-  memory3,
-  memory4,
-  memory5,
-  memory6,
-  memory7,
-  memory8,
-  memory14,
-  memory9,
-  memory10,
-  memory15,
-  memory11,
-  memory12,
-  memory13,
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/4.jpg",
+  "/images/5.jpg",
+  "/images/6.jpg",
+  "/images/7.jpg",
+  "/images/8.jpg",
+  "/images/8-1.jpg",
+  "/images/9.jpg",
+  "/images/10.jpg",
+  "/images/10-1.jpg",
+  "/images/third_last.jpg",
+  "/images/second_last.jpeg",
+  "/images/last.jpeg",
 ];
 
 const animations = [
