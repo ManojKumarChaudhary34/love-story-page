@@ -34,7 +34,7 @@ const Index = () => {
 
   const handleStart = () => {
     audioRef.current?.play();
-    transition('slideshow')
+    transition("slideshow");
   };
 
   const handleSlideshowComplete = useCallback(() => {
@@ -69,6 +69,11 @@ const Index = () => {
       <audio ref={audioRef} loop>
         <source src="/music1.mp3" type="audio/mpeg" />
       </audio>
+      <div className="absolute bottom-4 w-full flex justify-center pointer-events-none">
+        <p className="font-romantic text-lg text-white drop-shadow-lg">
+          Made with <span className="animate-pulse-heart">❤️</span> by Manoj
+        </p>
+      </div>
     </div>
   );
 };
