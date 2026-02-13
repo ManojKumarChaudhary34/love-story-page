@@ -38,10 +38,10 @@ const WishingCardScene = ({ onComplete }: WishingCardSceneProps) => {
           बन्नेछु। 
         </p>
         <p className="font-romantic text-3xl text-primary mb-8">
-         Happy Valentine's Day My Love ❤️
+         Happy Valentine's Day My Love <span className="animate-pulse-heart drop-shadow-lg">❤️</span>
         </p>
         <div className="min-h-[2rem]">
-          <span className="text-lg md:text-xl text-foreground/80 font-light">
+          <span className="text-base md:text-lg text-foreground/80 font-light">
             {displayedText}
             {showCaret && (
               <span

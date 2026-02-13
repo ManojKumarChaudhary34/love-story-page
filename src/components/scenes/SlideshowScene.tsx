@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import FloatingHearts from "../FloatingHearts";
 const images = [
-  "/images/1.jpg",
-  "/images/2.jpg",
-  "/images/3.jpg",
-  "/images/4.jpg",
-  "/images/5.jpg",
-  "/images/6.jpg",
-  "/images/7.jpg",
-  "/images/8.jpg",
-  "/images/8-1.jpg",
-  "/images/9.jpg",
-  "/images/10.jpg",
-  "/images/10-1.jpg",
-  "/images/third_last.jpg",
-  "/images/second_last.jpeg",
-  "/images/last.jpeg",
+  "https://drive.google.com/thumbnail?id=15mO2wGCapSlSoAnGiwdGJOPBXBSQcVCo&sz=s800",
+  "https://drive.google.com/thumbnail?id=1e_oAvi1C4FXOAsRa304oMuv5-SDoDw4C&sz=s800",
+  "https://drive.google.com/thumbnail?id=1TtGc8WsJ-La7Q7aHwEplEVYMAHenKmXZ&sz=s800",
+  "https://drive.google.com/thumbnail?id=1Xp9ltp6zLfxfPlw0Nfdw0P9t7PPlkD4L&sz=s800",
+  "https://drive.google.com/thumbnail?id=1srIBnkKlfjws2F02zSUXL8SBFUkAutP3&sz=s800",
+  "https://drive.google.com/thumbnail?id=1tONE1ow9xTUgtJUtKqpVM6Ui7zgTw262&sz=s800",
+  "https://drive.google.com/thumbnail?id=14goqX4t4O_f-Fgh6GMCUqa0DlR6gPG4w&sz=s800",
+  "https://drive.google.com/thumbnail?id=1-jlP4Qjv6Jr8BgCe6BamXxm_kaLmVZSH&sz=s800",
+  "https://drive.google.com/thumbnail?id=1Hfm1wD0yJOEdM6yb2H7a2ESAx5PByZ1B&sz=s800",
+  "https://drive.google.com/thumbnail?id=122hmODQIMhHXagC3MLMTKYije31aVeuN&sz=s800",
+  "https://drive.google.com/thumbnail?id=1d5bUiPHBsrBv7f0M9Mxxr8aHVflXWiGd&sz=s800",
+  "https://drive.google.com/thumbnail?id=16N0hQbRx5b-dxHnKhFs27pZ7JGXuWuSa&sz=s800",
+ 
 ];
 
 const animations = [
