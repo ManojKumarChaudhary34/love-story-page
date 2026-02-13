@@ -13,6 +13,9 @@ const images = [
   "https://drive.google.com/thumbnail?id=122hmODQIMhHXagC3MLMTKYije31aVeuN&sz=s800",
   "https://drive.google.com/thumbnail?id=1d5bUiPHBsrBv7f0M9Mxxr8aHVflXWiGd&sz=s800",
   "https://drive.google.com/thumbnail?id=16N0hQbRx5b-dxHnKhFs27pZ7JGXuWuSa&sz=s800",
+  "https://drive.google.com/thumbnail?id=1C497nS22hmtQsp5bZZJTAfU9-bOhMGY-&sz=s800",
+  "https://drive.google.com/thumbnail?id=1C06rG3exldy8xIwCsbjm5nhEUn3bz5gr&sz=s800",
+  "https://drive.google.com/thumbnail?id=1jWr9aXWt1LugJ_6OsnLOQ9z2gVMAF4a6&sz=s800",
  
 ];
 
@@ -37,13 +40,13 @@ const SlideshowScene = ({ onComplete }: SlideshowSceneProps) => {
       setCurrentIndex((prev) => {
         if (prev >= images.length - 1) {
           clearInterval(timer);
-          setTimeout(onComplete, 1500);
+          setTimeout(onComplete, 1200);
           return prev;
         }
         setAnimKey((k) => k + 1);
         return prev + 1;
       });
-    }, 2500);
+    }, 3500);
     return () => clearInterval(timer);
   }, [onComplete]);
 
