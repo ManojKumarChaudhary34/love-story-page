@@ -1,13 +1,39 @@
 import { useState, useEffect } from "react";
 import FloatingHearts from "../FloatingHearts";
 
-import memory1 from "@/assets/memory-1.jpg";
-import memory2 from "@/assets/memory-2.jpg";
-import memory3 from "@/assets/memory-3.jpg";
-import memory4 from "@/assets/memory-4.jpg";
-import memory5 from "@/assets/memory-5.jpg";
+import memory1 from "@/assets/1.jpg";
+import memory2 from "@/assets/2.jpg";
+import memory3 from "@/assets/3.jpg";
+import memory4 from "@/assets/4.jpg";
+import memory5 from "@/assets/5.jpg";
+import memory6 from "@/assets/6.jpg";
+import memory7 from "@/assets/7.jpg";
+import memory8 from "@/assets/8.jpg";
+import memory9 from "@/assets/9.jpg";
+import memory10 from "@/assets/10.jpg";
+import memory11 from "@/assets/third_last.jpg";
+import memory12 from "@/assets/second_last.jpeg";
+import memory13 from "@/assets/last.jpeg";
+import memory14 from "@/assets/8-1.jpg";
+import memory15 from "@/assets/10-1.jpg";
 
-const images = [memory1, memory2, memory3, memory4, memory5];
+const images = [
+  memory1,
+  memory2,
+  memory3,
+  memory4,
+  memory5,
+  memory6,
+  memory7,
+  memory8,
+  memory14,
+  memory9,
+  memory10,
+  memory15,
+  memory11,
+  memory12,
+  memory13,
+];
 
 const animations = [
   "animate-[fadeZoomIn_0.8s_ease-out_forwards]",
@@ -49,7 +75,7 @@ const SlideshowScene = ({ onComplete }: SlideshowSceneProps) => {
         </p>
         <div
           key={animKey}
-          className="glass-card rounded-2xl p-2 md:p-3 overflow-hidden"
+          className="glass-card rounded-2xl p-2 md:p-3 overflow-hidden shadow-6xl shadow-red-600"
           style={{
             animation: "fadeZoomIn 0.8s ease-out forwards",
           }}
@@ -57,7 +83,7 @@ const SlideshowScene = ({ onComplete }: SlideshowSceneProps) => {
           <img
             src={images[currentIndex]}
             alt={`Memory ${currentIndex + 1}`}
-            className="h-56 w-56 md:h-80 md:w-80 rounded-xl object-cover"
+            className="h-72 w-56 md:h-96 md:w-80 rounded-xl object-cover"
           />
         </div>
         <div className="flex gap-2 mt-3">
